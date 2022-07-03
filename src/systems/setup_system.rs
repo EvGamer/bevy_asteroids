@@ -12,7 +12,7 @@ pub fn setup_system(
 
   commands.insert_resource(Textures {
     player_ship: asset_server.load("images/player_ship.png"),
-    player_projectile: asset_server.load("images/red_laser"),
-    asteroid: asset_server.load("images/asteroid"),
+    player_projectile: asset_server.load("images/red_laser.png"),
+    asteroid: asset_server.load("images/asteroid.png"),
   })
 }

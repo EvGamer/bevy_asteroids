@@ -12,7 +12,7 @@ pub fn player_spawn_system(mut commands: Commands, textures: Res<Textures>) {
     .insert_bundle(SpriteBundle {
       texture: textures.player_ship.clone(),
       transform: Transform {
-        translation: Vec3::new(0., 0., 0.),
+        translation: Vec3::new(0., 0., 1.),
         rotation: Quat::from_rotation_z(f32::to_radians(90.)),
         ..default()
       },

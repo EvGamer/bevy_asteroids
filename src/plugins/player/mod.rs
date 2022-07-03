@@ -1,6 +1,7 @@
 use bevy::prelude::{ Plugin, App, StartupStage };
 
 mod systems;
+pub mod factories;
 pub mod components;
 
 use systems::player_spawn_system::*;

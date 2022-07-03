@@ -4,6 +4,7 @@ mod systems;
 mod plugins;
 mod components;
 mod resources;
+mod utils;
 
 use systems::*;
 use plugins::*;
@@ -17,10 +18,11 @@ fn main() {
       .add_plugin(PlayerPlugin)
       .insert_resource(ClearColor(BACKGROUND_COLOR))
       .insert_resource(KeyboardSettings {
-          forward: vec![KeyCode::W, KeyCode::Up],
-          backward: vec![KeyCode::S, KeyCode::Down],
-          rotate_left: vec![KeyCode::A, KeyCode::Left],
-          rotate_right: vec![KeyCode::D, KeyCode::Right],
+        forward: vec![KeyCode::W, KeyCode::Up],
+        backward: vec![KeyCode::S, KeyCode::Down],
+        rotate_left: vec![KeyCode::A, KeyCode::Left],
+        rotate_right: vec![KeyCode::D, KeyCode::Right],
+        fire: vec![KeyCode::Space, KeyCode::Numpad0],
       })
       .add_startup_system(setup_system)
       .add_system(movement_system)

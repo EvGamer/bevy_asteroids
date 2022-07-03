@@ -5,4 +5,5 @@ pub struct KeyboardSettings {
   pub backward: Vec<KeyCode>,
   pub rotate_left: Vec<KeyCode>,
   pub rotate_right: Vec<KeyCode>,
+  pub fire: Vec<KeyCode>,
 }
