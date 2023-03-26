@@ -27,6 +27,7 @@ fn main() {
       .add_startup_system(setup_system)
       .add_system(movement_system)
       .add_system(forward_acceleration_system)
-      .add_system(bevy::input::system::exit_on_esc_system)
+      .add_system(weapon_cooldown_system)
+      .add_system(bevy::window::close_on_esc)
       .run();
 }

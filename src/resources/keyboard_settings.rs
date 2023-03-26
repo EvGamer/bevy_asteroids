@@ -1,5 +1,6 @@
-use bevy::prelude::KeyCode;
+use bevy::prelude::{ KeyCode, Resource };
 
+#[derive(Resource)]
 pub struct KeyboardSettings {
   pub forward: Vec<KeyCode>,
   pub backward: Vec<KeyCode>,

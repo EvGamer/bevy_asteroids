@@ -12,13 +12,12 @@ pub fn spawn_laser (
   position: Vec3,
   rotation: Quat
 ) {
-  commands.spawn()
-    .insert(PlayerProjectile)
+  commands.spawn(PlayerProjectile)
     .insert(Velocity(vec3_to_vec2(&vector_from_radial_coord(
       PROJECTILE_VELOCITY_ABS,
       &rotation,
     ))))
-    .insert_bundle(SpriteBundle {
+    .insert(SpriteBundle {
       texture: textures.player_projectile.clone(),
       sprite: Sprite {
         custom_size: Some(Vec2::new(42.0, 7.0)),
