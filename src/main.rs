@@ -1,4 +1,5 @@
 use bevy::prelude::*;
+// use bevy_inspector_egui::quick::WorldInspectorPlugin;
 
 mod systems;
 mod plugins;
@@ -28,6 +29,8 @@ fn main() {
       .add_system(movement_system)
       .add_system(forward_acceleration_system)
       .add_system(weapon_cooldown_system)
+      .add_system(wrap_around_system)
       .add_system(bevy::window::close_on_esc)
+      // .add_plugin(WorldInspectorPlugin)
       .run();
 }
